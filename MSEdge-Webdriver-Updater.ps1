@@ -8,7 +8,7 @@ If ($previousversion -eq $installedversion) {
   $installedversion | Out-File -FilePath "$Path\edgeversion.txt"
   Remove-Item "$Path\msedgedriver.exe" -Force
   $WebClient = New-Object System.Net.WebClient
-  $URL = "https://msedgedriver.azureedge.net/$installedversion/edgedriver_win64.zip"
+  $URL = "https://msedgedriver.microsoft.com/$installedversion/edgedriver_win64.zip"
   $filepath = "$Path\edgedriver_win64.zip"
   $WebClient.DownloadFile($URL, $filepath)
   Add-Type -Assembly System.IO.Compression.FileSystem
